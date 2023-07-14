@@ -25,6 +25,10 @@ public class DatabaseConfig {
     @Value("${aws.secret.manager.secret.name}")
     private String secretName;
 
+    @Value("${spring.datasource.database.name}")
+    private String database;
+
+
     @Bean
     public DataSource dataSource() {
         // Create a Secrets Manager client
@@ -49,7 +53,7 @@ public class DatabaseConfig {
 
             DriverManagerDataSource dataSource = new DriverManagerDataSource();
             dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-            dataSource.setUrl("jdbc:mysql://" + host + ":" + port + "/ecommerce");
+            dataSource.setUrl("jdbc:mysql://" + host + ":" + port + "/"+database);
             dataSource.setUsername(username);
             dataSource.setPassword(password);
             System.out.println(dataSource.getConnection());

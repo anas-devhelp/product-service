@@ -47,4 +47,9 @@ public class CategoryController {
         return categoryService.update(id, dto);
     }
 
+    @GetMapping("/{id}/products")
+    public CategoryDto getProducts(@PathVariable Long id){
+        return categoryService.read(id);
+    }
+
 }

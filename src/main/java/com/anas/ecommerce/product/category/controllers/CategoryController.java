@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/category")
 /**
+ * <h1>CategoryController</h1>
  * This controller will provide data related to product categories.
  * CRUD operations are allowed as well as category listing along with product details
  * @author  Mohammad Anas

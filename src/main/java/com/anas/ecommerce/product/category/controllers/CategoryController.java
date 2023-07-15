@@ -22,6 +22,12 @@ public class CategoryController {
         return  categoryService.readAll();
     }
 
+
+    @GetMapping("/products")
+    public List<CategoryDto> getProducts(){
+        return categoryService.readAll();
+    }
+
     @GetMapping("/{id}")
     public CategoryDto get(@PathVariable Long id){
         return categoryService.read(id);
@@ -46,10 +52,4 @@ public class CategoryController {
     public CategoryDto put(@PathVariable Long id, @RequestBody CategoryDto dto){
         return categoryService.update(id, dto);
     }
-
-    @GetMapping("/{id}/products")
-    public CategoryDto getProducts(@PathVariable Long id){
-        return categoryService.read(id);
-    }
-
 }

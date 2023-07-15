@@ -12,6 +12,9 @@ import java.util.List;
 /**
  * This controller will provide data related to product categories.
  * CRUD operations are allowed as well as category listing along with product details
+ * @author  Mohammad Anas
+ * @version 1.0
+ * @since   2023-07-15
  */
 public class CategoryController {
 

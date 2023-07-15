@@ -9,6 +9,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/category")
+/**
+ * This controller will provide data related to product categories.
+ * CRUD operations are allowed as well as category listing along with product details
+ */
 public class CategoryController {
 
     private CategoryService categoryService;
